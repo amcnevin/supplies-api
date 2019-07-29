@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "fdad3f97-059c-46e0-903d-1db6808e11b9",
+		"name": "supplies api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Supplies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/supplies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"supplies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Supply",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\t\"name\" : \"wipes\",\n\t\"amount\": 65\n\t\t\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/supplies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"supplies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Supply",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/supplies/130",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"supplies",
+						"130"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch Supply",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"amount\": 70\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/supplies/97",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"supplies",
+						"97"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Supply",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"name\": \"wipes\",\r\n        \"amount\": 70.0,\r\n        \"id\": 97\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/supplies/97",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"supplies",
+						"97"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
