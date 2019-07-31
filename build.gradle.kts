@@ -29,11 +29,20 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	runtimeOnly("com.h2database:h2")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("org.junit.jupiter:junit-jupiter:5.5.1")
+	testImplementation("io.mockk:mockk:1.9.3")
 }
 
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
 		jvmTarget = "1.8"
+	}
+}
+
+tasks.test {
+	useJUnitPlatform()
+	testLogging {
+		events("passed", "skipped", "failed")
 	}
 }
